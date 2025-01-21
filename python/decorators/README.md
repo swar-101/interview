@@ -33,4 +33,3 @@ def calculate(a, b):
 This example uses a store decorator to save the arguments of the calculate function into a database
 (some_db.store(args)) every time the function is called. 
 It helps keep a record of the inputs automatically.
-
