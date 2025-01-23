@@ -1,0 +1,51 @@
+
+
+1. DNS
+	1.1. ICAN (How ICAN can be a bottleneck and SPoF)
+	1.2. Hierarchial structure
+2. Scaling 
+	2.1. Vertical scaling 		(Scale up)
+	2.2. Horizontal scaling		(Scale out)
+	
+3. 
+	
+
+1. Bloom filters
+2. Consistent Hashing
+
+
+
+3. Distributed System Patterns : 
+	3.2. Circuit Breaker
+	3.1. CQRS
+	3.2. Leader Election
+	3.3. Event Sourcing
+	3.4. Sharding 
+	3.5. Publisher/Subscriber
+	3.6. Ambassador
+
+4. Hotstar
+5. Kafka 
+	5.1. Zookeeper
+	5.2. Use cases
+	5.3. 
+6. Time Decay in Search
+7. NOSQL 
+8. LSM Trees
+9. Leader-Follower/Master-Slave architecture
+10. Write Ahead Logs 
+11. ABS (Adaptive Bitrate Streaming)
+12. Rate Limiting Strategies
+
+
+13. Caching:
+	
+	13.1. Top 5 caching strategies:
+		1) Cache Aside
+		2) Read Through
+		3) Write Around
+		4) Write Through
+	
+	13.2. Redis
+	13.3. 
+	

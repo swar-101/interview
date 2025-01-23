@@ -1,0 +1,24 @@
+
+Load Balancer
+	2 tasks:
+		1. Provides unified view of the backend to the user, a single point of contact.
+		2. Distributes the load evenly across all servers.
+	
+	Healthcheck/ Heartbeat
+	
+	LB are usually fast, but at Google scale it can become a bottleneck.
+	How do we solve it?
+	We use multiple load balancers.
+	If we have multiple LBs, we use DNS to assist.
+	
+How to distribute the data?
+
+1. Horizontal partitioning across multiple servers.
+2. How to forward requests?
+	Consistent Hashing
+	
+3. 
+	
+
+Caching
+
