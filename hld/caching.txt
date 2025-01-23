@@ -1,0 +1,43 @@
+Caching
+
+
+
+Benefits of caching:
+
+	1. Improves read speed (Note: Doesn't improve write speed)
+
+	2. It saves us from doing expensive computes multiple times.
+
+	3. Reduces load on DB.
+
+
+
+
+Challenges:
+
+	1. Invalidation
+	2. Eviction
+	
+	
+---
+	
+	
+Memory Hierarchy:
+
+	"Memory / Supply chains are always hierarchical"
+	
+	
+	e.g. Grocery Store -- Distributor -- factory -- raw materials
+	
+	
+	e.g. Human brain memory types:
+	
+			Types							Traits						Capacity 			  Accessibility
+		1. Working memory           (fastest,    very small)           4-7 items				Random Access
+		2. Short term memory 		(slow,       large)	              1000 items            	Random Access
+		3. Long term memory         (very slow,  very large)             ♾️                 Sequential Access
+		
+		
+
+		
+		

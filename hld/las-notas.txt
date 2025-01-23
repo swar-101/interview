@@ -15,8 +15,8 @@ How to distribute the data?
 
 1. Horizontal partitioning across multiple servers.
 2. How to forward requests?
-	Consistent Hashing
-	
+	Consistent Hashing (usually for data servers)
+	Round Robin (usually for app servers)
 3. 
 	
 
