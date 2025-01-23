@@ -11,9 +11,9 @@
 - **Problem**: Single LB can become a bottleneck.
 - **Solution**: Use multiple Load Balancers.
   - Assist with **DNS** to distribute traffic across multiple LBs.
+---
 
 
-# Load Balancers 
 ---
 # Load Balancing Algorithms
 
@@ -41,7 +41,11 @@ What's Important?
 
 ---
 
+
+
 # General guideline for Choosing the Correct LB Strategy
+
+![Choosing the Correct LB Diagram](.assets/choice-of-load-balancers.png)
 
 ### 1. Load Balancers for App Servers (Stateless): Round Robin Approach
 
@@ -50,12 +54,19 @@ What's Important?
 	- Round Robin is a simple and efficient algorithm that distributes requests evenly across the app servers, ensuring load is balanced in an unbiased manner.
 	- NOTE: This approach **works well when the requests are of similar size** and **the app servers have roughly equivalent capacity**.
 	
-- ⚠️ When to consider Alternatives:
+- ⚠️ When to Consider Alternatives:
 	- If **requests are not uniform in size**, consider **Weighted Round Robin** **or Least Connections** to account for differences in server capacities or current load. 
 ---
 ### 2. Load Balancers for Data Servers (Stateful): Consistent Hashing
 
-- Reasons for Consistent Hashing
+- Reason for Consistent Hashing
+	- Data Servers often store state (e.g., user data, cached content) and need requests routed to the server holding the relevant state.
+	- Consistent Hashing ensures that requests for the same data (e.g. identified by a key) are consistently routed to the same server. This minimizes cache misses and reduces the overhead or re-distributing data across servers when nodes are added or removed.
+	- This is especially critical in distributed systems like distributed caches (e.g., Redis cluster) or distributed databases.
+
+- ⚠️ When to Consider Alternatives:
+	- If the **system allows for full replication of data across all nodes**, any **node can handle any request**, and consistent hashing may not be necessary. 
+	- In scenarios where the **latency of re-distributing data due to node changes is tolerable**, **simpler approaches** **might suffice.**
 
 ---
 
