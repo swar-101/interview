@@ -1,3 +1,17 @@
+# Load Balancers
+
+## Tasks
+1. Provides a unified view of the backend to the user (single point of contact).
+2. Distributes the load evenly across all servers.
+
+## Health Check / Heartbeat
+- Monitors server health to route traffic only to healthy servers.
+
+## Scalability at Google Scale
+- **Problem**: Single LB can become a bottleneck.
+- **Solution**: Use multiple Load Balancers.
+  - Assist with **DNS** to distribute traffic across multiple LBs.
+
 
 # Load Balancers 
 ---
@@ -27,23 +41,21 @@ What's Important?
 
 ---
 
-
-# Choice for Load Balancing Strategy
-
-## General guideline
+# General guideline for Choosing the Correct LB Strategy
 
 ### 1. Load Balancers for App Servers (Stateless): Round Robin Approach
 
 - Reason for Round Robin:
 	- App servers typically handle stateless requests, meaning each request is independent and do not require knowledge of previous interactions. 
 	- Round Robin is a simple and efficient algorithm that distributes requests evenly across the app servers, ensuring load is balanced in an unbiased manner.
-	- This approach **works well when the requests are of similar size** and **the app servers have roughly equivalent capacity**.
+	- NOTE: This approach **works well when the requests are of similar size** and **the app servers have roughly equivalent capacity**.
 	
 - ⚠️ When to consider Alternatives:
 	- If **requests are not uniform in size**, consider **Weighted Round Robin** **or Least Connections** to account for differences in server capacities or current load. 
 ---
 ### 2. Load Balancers for Data Servers (Stateful): Consistent Hashing
 
+- Reasons for Consistent Hashing
 
 ---
 
