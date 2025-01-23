@@ -45,7 +45,7 @@ What's Important?
 
 # General guideline for Choosing the Correct LB Strategy
 
-![Choosing the Correct LB Diagram](.assets/choice-of-load-balancers.png)
+![Choosing the Correct LB Diagram](./assets/choice-of-load-balancers.png)
 
 ### 1. Load Balancers for App Servers (Stateless): Round Robin Approach
 
