@@ -28,15 +28,18 @@ Can lead to **uneven distribution if server capacities differ or workloads vary*
 ### How it works 
 Assigns **weights to the servers** **based on their capacities and distribute requests proportionally**.
 ### Use Case
-When servers have **varying processing power or capacity**.
+**When servers have** **varying processing power or capacity**.
 ### Limitation
 Requires **proper weight tuning and monitoring**.
 
 ## 3. Least Connections
 ### How it works
-Routes requests to the server with the fewest active connections
+Routes requests to the server with the **fewest active connections**.
 ### Use Case
-Best for stateful applications where connection duration varies
+**Best for stateful applications** **where connection duration varies.**
+
+*How does having fewest active connections relates to connection duration variation in stateful apps?* 
+
 ### Limitation
 May not account for server capacity differences.
 
@@ -45,48 +48,48 @@ May not account for server capacity differences.
 Uses a hash function to map requests (e.g. keys, userIDs, etc.) to specific servers.
 Minimizes remapping during node additions/removals.
 ### Use Case
-Ideal for distributed storage systems, caches, or databases.
+**Ideal for distributed storage systems, caches, or databases.**
 ### Limitation
-Can lead to uneven load if not tuned or if data distribution is skewed.
+Can lead to **uneven load if not tuned or if data distribution is skewed**.
 
 ## 5. IP Hash
 ### How it works 
-Maps client IP addresses to specific servers using a hash function, ensuring requests from the same client are routed to the same server.
+**Maps client IP addresses to specific servers using a hash function**, ensuring requests from the same client are routed to the same server.
 ### Use Case
-Useful for maintaining session consistency in stateful systems.
+**Useful for maintaining session consistency in stateful systems.**
 ### Limitation
-Can lead to uneven load distribution
+Can lead to **uneven load distribution**.
 
 ## 6. Random
 ### How it works 
-Assigns requests to a random server.
+**Assigns requests to a random server.**
 ### Use Case
-Simple to implement works well with large number of evenly loaded servers.
+**Simple to implement works well with large number of evenly loaded servers.**
 ### Limitation
-Not efficient for uneven server capacities or stateful applications.
+**Not efficient for uneven server capacities or stateful applications.**
 
 ## 7. Least Response Times
 ### How it works 
-Routes requests to the server with the least response time, combining connection count and real-time performance.
+Routes requests to the **server with the least response time**, combining connection count and real-time performance.
 ### Use Case
-Dynamic systems where server response times vary frequently.
+**Dynamic systems where server response times vary frequently.**
 ### Limitation
-Overhead of measuring response times.
+**Overhead of measuring response times.**
 
 ## 8. Adaptive Load Balancing
 ### How it works 
-Dynamically adjusts routing based on real-time server performance metrics (e.g. CPU load, memory usage).
+**Dynamically adjusts routing based on real-time server performance metrics** (e.g. CPU load, memory usage).
 ### Use Case
-Complex systems with fluctuating workloads.
+**Complex systems with fluctuating workloads.**
 ### Limitation
-Requires sophisticated monitoring and tuning.
+**Requires sophisticated monitoring and tuning.**
 
 
 ## What's Important?
-1. Understanding how each algorithm works and when to use it.
-2. Discussing the trade-offs: pros and cons, and real-world scenarios.
-3. Choosing the right algorithm based on system requirements, e.g. stateless vs. stateful, uniform vs. non-uniform, etc.
-4. Addressing how algorithms handle node additions/removals and failures.
+1. Understanding **how each algorithm works** and **when to use it.**
+2. Discussing the **trade-offs**: pros and cons, and real-world scenarios.
+3. **Choosing the right algorithm** based on system requirements, e.g. stateless vs. stateful, uniform vs. non-uniform, etc.
+4. Addressing **how algorithms handle node additions/removals and failures**.
 
 ---
 
