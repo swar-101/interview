@@ -17,12 +17,12 @@
 .idea/vcs.xml
 
 # Build output directories
-/out/
+/out/production/
 target/
 build/
 
 # Class files
-*.class
+.class
 
 # Maven and Gradle directories
 .mvn/
