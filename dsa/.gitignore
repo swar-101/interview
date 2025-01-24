@@ -21,6 +21,9 @@
 target/
 build/
 
+# Class files
+.class
+
 # Maven and Gradle directories
 .mvn/
 .gradle/
