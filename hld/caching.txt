@@ -1,0 +1,75 @@
+Caching
+
+
+
+Benefits of caching:
+
+	1. Improves read speed (Note: Doesn't improve write speed)
+
+	2. It saves us from doing expensive computes multiple times.
+
+	3. Reduces load on DB.
+
+
+
+
+Challenges:
+
+	1. Invalidation
+	2. Eviction
+	
+	
+---
+	
+	
+Memory Hierarchy:
+
+	"Memory / Supply chains are always hierarchical"
+	
+	
+	e.g. Grocery Store -- Distributor -- factory -- raw materials
+	
+	
+	e.g. Human brain memory types:
+	
+			Types							Traits						Capacity 			  Accessibility
+		1. Working memory           (fastest,    very small)           4-7 items				Random Access
+		2. Short term memory 		(slow,       large)	              1000 items            	Random Access
+		3. Long term memory         (very slow,  very large)             ♾️                 Sequential Access
+		
+		
+
+		
+	Hardware -- CPU -- Registers 0.2 ns / small / <1KB -- L1 Cache -- L2 Cache -- L3 Cache
+	
+	Note: If CPU as 4 cores, there are four L1 and L2 cache corresponding to each core.
+			While L3 cache has shared access across all the cores.
+			
+			
+	Hardware -- RAM (slower compared to CPU) very fast 10 ns / large upto 64 GB till 12 TB
+
+
+	Hardware -- HDD (very slow) 		10 ms  (1 million times slower than RAM)
+			 -- SSD (tad bit faster)     2 ms  
+	
+	Hardware -- External -- Tape Drive
+						 -- CD ROM
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+Memory Hierarchy in Backend Infrastructure:
+
+Cache Architecture 
+						 
+		 
+														
+														

@@ -1,0 +1,29 @@
+# IntelliJ IDEA specific files and folders
+.idea/
+*.iml
+*.iws
+
+# User-specific files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Logs and indexing
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/vcs.xml
+
+# Build output directories
+/out/
+target/
+build/
+
+# Maven and Gradle directories
+.mvn/
+.gradle/
+.gradle/cache/
+.gradle/init.d/
+.gradle/buildOutputCleanup/

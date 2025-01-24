@@ -7,7 +7,7 @@ def memoize(func):
 
     def wrapper(*args):
         if args in cache:
-            print("Fetching memoized value.")       
+            print("Fetching memoized value.")
             return cache[args]  # return if already cached
         result = func(*args)
         cache[args] = result  # doubt: Does this mean that we store result or overwrite the result for the particular env
