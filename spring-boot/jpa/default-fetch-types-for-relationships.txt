@@ -1,0 +1,5 @@
+1. Default Fetch Types for Relationships
+@OneToOne: The default fetch type is EAGER.
+@ManyToOne: The default fetch type is EAGER.
+@OneToMany: The default fetch type is LAZY.
+@ManyToMany: The default fetch type is LAZY.
