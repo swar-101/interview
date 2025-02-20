@@ -7,7 +7,7 @@ public class App {
                 .setSauce("Tomato Basil")
                 .setCheese("Mozzarella")
                 .setTopping("Pepperoni").build();
-        
+
         System.out.println(pizza.toString());
     }
 }
