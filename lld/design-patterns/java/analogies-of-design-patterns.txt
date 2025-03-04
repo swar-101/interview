@@ -1,0 +1,73 @@
+Singleton Pattern
+	
+	Catchphrase: "I am the one, the only one you need"
+	Analogy
+		
+		
+		
+		
+Builder Pattern 
+	Catchphrase: 
+	Analogy
+		
+		
+		
+Prototype and Registry Pattern
+	
+	Catchphrase: ""
+	Analogy:
+	
+		
+
+
+
+Factory Pattern 	
+	
+	Catchphrase: ""
+	
+	
+	Simple Factory Pattern
+		- It's like a veding machine; it dispenses single snack based on your selection.
+	
+	Abstract Factory Pattern
+		- It's like a full-course meal service; it provides an appetizer, main course, dessert, etc.
+		
+	
+	
+
+Adapter Pattern 
+	Catchphrase: ""
+
+
+Facade Pattern
+	Catchphrase: ""
+	Analogy:
+
+Flyweight Pattern 
+	Catchphrase: ""
+	Analogy:
+
+
+Decorator Pattern 
+	Catchphrase: ""
+	Analogy:
+
+
+
+Strategy Pattern 
+	Catchphrase: "When in doubt, switch it out!"
+	Analogy: 
+		You're a DJ with a massive playlist.
+		The Party (the Context) might need a chill beat one moment and an upbeat banger the next.
+		You have several tracks (strategies) to ready to spin.
+		As soon as the vibe changes, you swap out the tune (algorithm) on the fly, ensuring that the crowd always stays in sync with the beat!
+
+Observer Pattern
+	Catchphrase: "I wanna know what's happening in your world!"
+	
+	Analogy: 
+		All about creating a fan club.
+		You have a celebrity (the Subject).
+		And, you have a bunch of adoring fans (the Observers).
+		When the celebrity does something noteworthy (state changes).
+		All the fans (the Observers) get an update automatically.

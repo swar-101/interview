@@ -1,13 +1,13 @@
 Singleton Pattern Cookbook:
 
-
 For a single threaded environment...
-1. Ensure that there is a private constructor in the 'impl' class.
-2. Ensure the 'impl' class contains `getInstance()` and
-	- if it's not meant for production a `resetInstance()` method.
+1. Ensure that there is a private constructor in the intended class.
+2. Ensure the the intended class contains `getInstance()` and
+	- if it's not meant for production, it can have a `resetInstance()` method.
 3. Ensure that all the implemented methods are handled for preventing `NullPointerException`(s).
 
-
 For multi-threaded environment...
-
-
+1. Ensure that there is a private constructor in the intended class.
+2. Ensure that the intended class contains `getInstance()` with double check locking using the `synchronized` keyword.
+	- if it's not meant for production, it can have a `resetInstance()` method.
+3. Ensure that all the implemented methods are handled for preventing `NullPointerException`(s)s.

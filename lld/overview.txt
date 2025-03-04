@@ -1,0 +1,61 @@
+SOLID Principles 
+	1. Single Responsibility Principle SRP
+	2. Open/Closed Principle 	       OCP
+	3. Liskov Substitution             LSP
+	4. Interface Segregation(IS) 	   ISP
+	5. Dependency Inversion(DI)        DIP 
+
+
+Design Patterns
+
+	Creational Design Patterns
+	1. Singleton 					(revise) (cookbook) (theory)
+	2. Builder   					(revise) (cookbook) (theory)
+	3. Prototype 
+	4. Registry 					(revise) (cookbook)	(theory)
+	5. Factory 						(revise) (cookbook)	(theory)
+	
+	
+	Creational Design Patterns 
+	6. Adapter 
+	7. Facade 						(revise) (cookbook)	(theory)
+	8. Decorator 
+	9. Flyweight					(revise) (cookbook) (theory)
+	
+	Behavioral Design Patterns	
+	10.	Strategy 					(revise) (cookbook) (theory)
+	11.	Observer 					(revise) (cookbook) (theory)
+		
+		
+		
+UML Diagrams
+
+	1. Classification:
+		- Structural 
+			Class Diagrams
+		
+		- Behavioral
+			Use Case Diagrams
+			
+	2. Common UMLs
+	3. Use-case diagram
+		
+	4. Class diagram
+		- Visibility 
+				- private
+				- public 
+				- protected
+				- package private
+		- Relationships
+			- Inheritance
+			- Association
+			- Aggregation
+			- Composition
+			
+		- Multiplicity
+			- 0 to 1
+			- 1 to 1 
+			- 0 to m
+			- 1 to m 
+			- m to n 
+			- m to m

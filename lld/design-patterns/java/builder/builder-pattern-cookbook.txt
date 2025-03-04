@@ -1,0 +1,8 @@
+Builder Pattern Cookbook:
+
+1. Create a private static inner class for the intended class.
+2. Declare all the fields of the intended class as private inside this private static inner class.
+	[Mention all the key concepts during or after the steps] 
+3. Create a public non-parameterized constructor.
+4. Assign all the outer fields to the inner fields using this non-parameterized constructor.
+5. Declare 
