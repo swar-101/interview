@@ -11,6 +11,16 @@ Double-checked locking
 The Bill Pugh Singleton 
 
 
+## [[Prototype and Registry Pattern]]
+
+Immutable Objects
+Mutable Objects
+Collections
+Deep Copy 
+Shallow Copy
+Copy Constructor
+
+
 # Builder Design Pattern
 	Telescoping
 	Constructor chaining

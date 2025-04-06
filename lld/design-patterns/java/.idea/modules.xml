@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/code/adapter/adapter.iml" filepath="$PROJECT_DIR$/code/adapter/adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/builder/builder.iml" filepath="$PROJECT_DIR$/code/builder/builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/facade/facade.iml" filepath="$PROJECT_DIR$/code/facade/facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/factory/factory.iml" filepath="$PROJECT_DIR$/code/factory/factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/flyweight/flyweight.iml" filepath="$PROJECT_DIR$/code/flyweight/flyweight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/observer/observer.iml" filepath="$PROJECT_DIR$/code/observer/observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/prototype-and-registry/prototype-and-registry.iml" filepath="$PROJECT_DIR$/code/prototype-and-registry/prototype-and-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/singleton/singleton.iml" filepath="$PROJECT_DIR$/code/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/strategy/strategy.iml" filepath="$PROJECT_DIR$/code/strategy/strategy.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,7 +1,9 @@
 
+# Singleton Pattern Cookbook
+
 For Single-threaded Environment
  - [Lazy Initialization](#lazy-initialization)
- - [Eager initialization](#eager-initialization)
+ - [Eager initialization](#eager-initialization) *(not recommended)*
 
 For Multithreaded Environment 
 - [Using `synchronized` block](#using-synchronized-keyword)
@@ -16,7 +18,11 @@ Miscellaneous
 ## 1. [[Lazy Initialization]]
 
 1. **Initializing Singleton Instance:** Create a private static global instance of the object inside the intended class. Initialize it to null. Name it as "INSTANCE" as a good practice.  
-    This is going to be our Singleton Instance after further processing.
+```java
+public static FooBar INSTANCE = null;
+```
+
+This is going to be our Singleton Instance after further processing.
     
 2. **Creating Private Constructor:**  
     Create a private constructor for instantiating this Singleton Instance. Choose a parameterized or a non-parameterized constructor depending on whether the instance requires additional parameters to ensure appropriate instantiation of this Singleton Instance.  
@@ -25,7 +31,7 @@ Miscellaneous
 3. **Creating `getInstance()` Method:**  
     Create a method named `getInstance()` with the return type set to Singleton Class. This method will return the Singleton Object which will be used globally.  
     In this method, we ensure that the Singleton Instance is only instantiated if and only if it is null.  
-    It also ensures that our Singleton Instance is instantiated only once througout the lifecycle of our program.
+    It also ensures that our Singleton Instance is instantiated only once throughout the lifecycle of our program.
     
 4. **Creating `resetInstance()` Method (Note: Not for Production Use):**  
     Create a method name `resetInstance` with return type void. This method will set our instantiated Singleton Instance to null.  
@@ -35,8 +41,8 @@ Miscellaneous
 
 ---
 
-## 2. Eager Initialization 
-Not recommended, [why?](#why-is-eager-loading-in-singleton-threaded-environment-not-recommended)
+## 2. [[Eager Initialization]] 
+Not recommended
 
 1. **Creating a Private Constructor:**  
     Create a private constructor for instantiating this Singleton Instance. Choose a parameterized or a non-parameterized constructor depending on whether the instance requires additional parameters to ensure appropriate instantiation of this Singleton Instance.
@@ -109,26 +115,69 @@ Not recommended, [why?](#why-is-eager-loading-in-singleton-threaded-environment-
 
 ---
 
-## [Why is Eager Loading in singleton-threaded environment not recommended?]
+## [Why is Eager Loading in singleton-threaded environment not recommended?](#why-is-eager-loading-in-singleton-threaded-environment-not-recommended)
 
 
 1. **Memory Overhead:**  
-    What if we never end up using this Singleton Instance? It would seem unnecessary to instantiate it as soon as the class load into the compiler.  
-    What if this Singleton Instance is resource-intensive? Loading a heavy Singleton Instance object without its use leads to unnecessary memory usage.
+    *What if we never end up using this Singleton Instance?* 
+    It would seem unnecessary to instantiate it as soon as the class load into the compiler.  
+    *What if this Singleton Instance is resource-intensive?* 
+    Loading a heavy Singleton Instance object without its use leads to unnecessary memory usage.
     
 2. **Lack of Flexibility:**  
     We don't get the control of instantiating it ourselves. We just end up calling the Singleton Instance "INSTANCE" which is already instantiated for us.
     
 3. **Thread-safety is Overkill:**  
     We have a single-threaded environment, having a thread-safe instance would seem a good idea at first.  
-    "But do we really need a thread-safe instantiation of a resource-intensive Singleton Instance which causes memory overhead and we never or rarely use it?"  
+    *"But do we really need a thread-safe instantiation of a resource-intensive Singleton Instance which causes memory overhead and we never or rarely use it?"*
+      
     Thread-safety isn't a primary concern when it comes to single-threaded environments.  
-    It's nice to have thread-safety if you expect that your code might evolve into a multi-threaded environment.
+    It's nice to have thread-safety if you expect that your code might evolve into a multithreaded environment.
     
 
 
 ## For Multithreaded Environments
 
 ### Using `synchronized` keyword
+	
+1. **Initializing Singleton Instance:** Create a private static global instance of the object inside the intended class. Initialize it to null. Name it as "INSTANCE" as a good practice.  
+```java
+public static FooBar INSTANCE = null;
+```
+
+> This is going to be our Singleton Instance after further processing.
+    
+2. **Creating Private Constructor:**  
+    Create a private constructor for instantiating this Singleton Instance. Choose a parameterized or a non-parameterized constructor depending on whether the instance requires additional parameters to ensure appropriate instantiation of this Singleton Instance.  
+    
+> This private constructor creation will prevent external instantiation, ensuring that it is possible instantiating the Singleton Instance in the intended class only.
+
+3. Create `getInstance()` method:
+	Create a method called `getInstance()`. This method will instantiate our Singleton Instance in a `synchronized` block if null or return a Singleton Instance of the class if already instantiated. 
+	
+```java
+public static FooBar getInstance() {
+	if (INSTANCE == null) {
+		synchronized ()
+	}
+	return INSTANCE;
+}
+```
+
+> This ensures that the Singleton Instance is created in a [[non-blocking]] manner. 
+> In multithreaded environments, it's possible that the `getInstance()` method is called concurrently (at the same time) during execution. The `synchronized` keyword ensures thread-safety by locking the process until the Singleton instance is ready to use. 
+
+4. **Creating `resetInstance()` Method (Note: Not for Production Use):**  
+    Create a method name `resetInstance` with return type void. This method will set our instantiated Singleton Instance to null.
+    
+    ```java
+    public static void resetInstance() {
+    	INSTANCE = null;
+    }
+    ```
+    
+> This is especially useful in non-production environments during testing as it provides control to reset our instantiated Singleton Instance on demand. 
+
+> Note: Make sure you exclude this from Production Code as it breaks the Singleton guarantee.
 
 

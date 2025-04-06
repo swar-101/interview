@@ -1,4 +1,3 @@
-
 ## Definition
 
 Lazy initialization is a programming technique where 
@@ -17,5 +16,4 @@ You wait until someone rings your doorbell before you brew up that coffee! ☕
 This approach is like have a sous-chef who only starts cooking when you actually order a dish, saving energy and avoiding unnecessary preparation if you change your mind later. 👨‍🍳
 
 #analogy 
-
 
